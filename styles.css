@@ -1,0 +1,168 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    color: #fff;
+
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+        url("../img/font.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+p{
+    font-size: 24px;
+}
+
+
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+img {
+    width: 750px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    margin: 1%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px 0 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: red;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: red;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section p {
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.85;
+}
+
+
+table {
+    width: 70%;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+th {
+    background: linear-gradient(45deg, #900, #c00);
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+#contacto h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.texto-contacto {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+#contacto table {
+    width: 60%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#contacto th {
+    background: #c00;
+    color: white;
+}
+
+#contacto td {
+    padding: 12px;
+}
+
+#contacto tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.copy {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}

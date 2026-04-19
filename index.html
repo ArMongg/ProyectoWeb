@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>STYLEZONE</title>
 
 </head>
@@ -31,9 +32,11 @@
         <section id="productos">
             <h2>Nuestras poleras</h2>
 
-            'AGREGAR LAS IMAGENES DE LAS POLERAS'
+            <img src="img/Poleras.png" alt="Poleras estilo urbano">
+            <img src="img/Poleras2.png" alt="Poleras estilo urbano">
 
         <section id="multimedia">
+<<<<<<< HEAD
             <h2>Multimedia</h2>
 
             <h3>Video</h3>
@@ -45,8 +48,128 @@
                 <audio controls>
                 <source src="audio/mi_audio.mp3" type="audio/mpeg">
                 </audio>
+=======
+            <h2>Video promocional</h2>
+            
+            <video width="640" height="360" controls>
+                <source src="./Multimedia/Video.mp4" type="video/mp4">
+                
+            </video>
+
+            <h2>Musica de fondo</h2>
+                <audio controls loop><source src="Audio/Breathing_Room.mp3" type="audio/mpeg"></audio>
+>>>>>>> 7432fcb627a5c758dc059fd7cac459521378d539
         </section>
 
+        <section id="tabla">
+            <h2>Lista de Productos</h2>
+
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Talla</th>
+                </tr>
+                <tr>
+                    <td>Polera Negra</td>
+                    <td>S/50</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>Polera Blanca</td>
+                    <td>S/45</td>
+                    <td>L</td>
+                </tr>
+                <tr>
+                    <td>Polera Roja</td>
+                    <td>S/55</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>Polera Azul</td>
+                    <td>S/60</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>Polera Oversize</td>
+                    <td>S/70</td>
+                    <td>L</td>
+                </tr>
+            </table>
+
+            <h2>Horarios de Atención</h2>
+
+            <table>
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+                <tr>
+                    <td>Lunes - Viernes</td>
+                    <td>9:00 am - 6:00 pm</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>10:00 am - 4:00 pm</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>Cerrado</td>
+                </tr>
+            </table>
+        </section> 
     </main>
+    <footer>
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+
+        <p class="texto-contacto">
+            Estamos disponibles para ayudarte. Escríbenos por cualquiera de estos medios:
+        </p>
+
+        <table>
+            <tr>
+                <th>Medio</th>
+                <th>Detalle</th>
+            </tr>
+            <tr>
+                <td>WhatsApp</td>
+                <td>999 999 999</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>contacto@stylezone.com</td>
+            </tr>
+        </table>
+
+     <h3>Formulario de contacto</h3>
+
+     <form>
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Correo:</label><br>
+        <input type="email" name="correo" required><br><br>
+
+        <label>Producto de interés:</label><br>
+        <select name="producto">
+            <option>Polera Negra</option>
+            <option>Polera Blanca</option>
+            <option>Polera Roja</option>
+            <option>Polera Azul</option>
+            <option>Polera Oversize</option>
+        </select><br><br>
+
+        <label>Mensaje:</label><br>
+        <textarea name="mensaje" rows="4" cols="30"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+        
+    </section>
+
+    <p class="copy">© 2026 StyleZone - Todos los derechos reservados</p>
+</footer>
 </body>
+
 </html>
