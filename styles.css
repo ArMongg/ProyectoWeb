@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 p{
     font-size: 24px;
 }
@@ -24,6 +25,8 @@ header {
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
+
+
 img {
     width: 750px;
     border-radius: 10px;
@@ -148,7 +151,6 @@ form textarea {
     border: none;
     outline: none;
 }
-
 form label {
     font-weight: bold;
     display: block;
@@ -162,6 +164,7 @@ footer {
     text-align: center;
     margin-top: 50px;
     border-top: 1px solid rgba(255,255,255,0.2);
+
 }
 
 form button {
