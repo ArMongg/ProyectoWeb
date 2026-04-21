@@ -35,19 +35,21 @@
             <img src="img/Poleras.png" alt="Poleras estilo urbano">
             <img src="img/Poleras2.png" alt="Poleras estilo urbano">
 
-        </section>
-
         <section id="multimedia">
-            <h2>Video promocional</h2>
-            
-            <video width="640" height="360" controls>
-                <source src="./Multimedia/Video.mp4" type="video/mp4">
-                
+
+            <h3>Video</h3>
+                <video controls width="500">
+                <source src="video/mi_video.mp4" type="video/mp4">
             </video>
 
-            <h2>Musica de fondo</h2>
-            /* AGREGAR AUDIO*/
-            
+            <video controls width="500">
+                <source src="video/Video.mp4" type="video/mp4">
+            </video>
+
+            <h3>Audio</h3>
+                <audio controls>
+                <source src="audio/Breathing_Room.mp3" type="audio/mpeg">
+                </audio>
         </section>
 
         <section id="tabla">
@@ -130,6 +132,31 @@
                 <td>contacto@stylezone.com</td>
             </tr>
         </table>
+
+     <h3>Formulario de contacto</h3>
+
+     <form>
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Correo:</label><br>
+        <input type="email" name="correo" required><br><br>
+
+        <label>Producto de interés:</label><br>
+        <select name="producto">
+            <option>Polera Negra</option>
+            <option>Polera Blanca</option>
+            <option>Polera Roja</option>
+            <option>Polera Azul</option>
+            <option>Polera Oversize</option>
+        </select><br><br>
+
+        <label>Mensaje:</label><br>
+        <textarea name="mensaje" rows="4" cols="30"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+        
     </section>
 
     <p class="copy">© 2026 StyleZone - Todos los derechos reservados</p>

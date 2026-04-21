@@ -31,6 +31,17 @@ img {
     margin: 1%;
 }
 
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
 header h1 {
     margin: 0;
     font-size: 2.2em;
@@ -102,6 +113,7 @@ table {
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
+
 th, td {
     padding: 12px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -116,12 +128,53 @@ tr:hover {
     background-color: rgba(255,255,255,0.1);
 }
 
+form {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+    color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    text-align: left;
+}
+
 footer {
     background: rgba(0, 0, 0, 0.9);
     padding: 40px 20px;
     text-align: center;
     margin-top: 50px;
     border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: linear-gradient(45deg, #c00, #900);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 #contacto h2 {
