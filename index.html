@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>STYLEZONE</title>
 
 </head>
 <body>
 
     <header>
-        <h1>StyleZone</h1>
+        <h1>Style<span>Zone</span></h1>
         <nav>
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -31,27 +36,35 @@
 
 
         <section id="productos">
+
             <h2>Nuestras poleras</h2>
 
-            <img src="img/Poleras.png" alt="Poleras estilo urbano">
-            <img src="img/Poleras2.png" alt="Poleras estilo urbano">
+            <div class="galeria">
+
+                <img src="img/Poleras.png" alt="">
+                <img src="img/Poleras2.png" alt="">
+
+            </div>
 
         </section>
 
         <section id="multimedia">
 
-            <h3>Video</h3>
-                <video controls width="500">
-                <source src="video/mi_video.mp4" type="video/mp4">
-            </video>
+            <div class="contenedor-videos"> 
 
-            <video controls width="500">
-                <source src="video/Video.mp4" type="video/mp4">
-            </video>
+                <video controls>
+                    <source src="video/mi_video.mp4" type="video/mp4">
+                </video>
+
+                <video controls>
+                    <source src="video/Video.mp4" type="video/mp4">
+                </video>
+
+            </div>
 
             <h3>Audio</h3>
                 <audio controls>
-                <source src="audio/Breathing_Room.mp3" type="audio/mp3">
+                <source src="audio/mi_audio.mp3" type="audio/mp3">
                 </audio>
         </section>
 
@@ -112,6 +125,26 @@
                 </tr>
             </table>
         </section> 
+
+        <div class="beneficios">
+            <div class="card">
+                <i class="fa-regular fa-gem"></i>
+                <h3>Calidad premium</h3>
+                <p>Telas resistentes y cómodas</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-shirt"></i>
+                <h3>Estilo Urbano</h3>
+                <p>Moda moderna para cualquier ocasión</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Envío rápido</h3>
+                <p>Recibe tu pedido en tiempo récord</p>
+            </div>
+        </div>
     </main>
     <footer>
     <section id="contacto">
@@ -127,11 +160,11 @@
                 <th>Detalle</th>
             </tr>
             <tr>
-                <td>WhatsApp</td>
-                <td>999 999 999</td>
+                <td><i class="fa-brands fa-whatsapp"></i> WhatsApp</td>
+                <td>959 109 491</td>
             </tr>
             <tr>
-                <td>Email</td>
+                <td><i class="fa-solid fa-envelope"></i> Email</td>
                 <td>contacto@stylezone.com</td>
             </tr>
         </table>
