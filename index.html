@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>STYLEZONE</title>
 
 </head>
 <body>
-
     <header>
-        <h1>Style<span>Zone</span></h1>
+        <h1>StyleZone</h1>
         <nav>
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -35,38 +29,44 @@
         </section>
 
 
-        <section id="productos">
+  <section id="productos">
+    <h2>Nuestras poleras</h2>
 
-            <h2>Nuestras poleras</h2>
-
-            <div class="galeria">
-
-                <img src="img/Poleras.png" alt="">
-                <img src="img/Poleras2.png" alt="">
-
-            </div>
-
-        </section>
+    <div class="galeria">
+        <img src="img/Poleras.png" alt="Poleras estilo urbano">
+        <img src="img/Poleras2.png" alt="Poleras estilo urbano">
+    </div>
+</section>
 
         <section id="multimedia">
 
-            <div class="contenedor-videos"> 
+    <h2>Experiencia Visual</h2>
 
-                <video controls>
-                    <source src="video/mi_video.mp4" type="video/mp4">
-                </video>
+    <div class="media-container">
 
-                <video controls>
-                    <source src="video/Video.mp4" type="video/mp4">
-                </video>
+        <div class="media-box">
+            <h3>Video principal</h3>
+            <video class="media-video" autoplay muted loop>
+                <source src="video/mi_video.mp4" type="video/mp4">
+            </video>
+        </div>
 
-            </div>
+        <div class="media-box">
+            <h3>Video promocional</h3>
+            <video class="media-video" autoplay muted loop>
+                <source src="video/Video.mp4" type="video/mp4">
+            </video>
+        </div>
 
-            <h3>Audio</h3>
-                <audio controls>
-                <source src="audio/mi_audio.mp3" type="audio/mp3">
-                </audio>
-        </section>
+    </div>
+    <div class="audio-card">
+    <h3>Experiencia sonora</h3>
+    <audio controls loop>
+        <source src="audio/mi_audio.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+</section>
 
         <section id="tabla">
             <h2>Lista de Productos</h2>
@@ -125,26 +125,6 @@
                 </tr>
             </table>
         </section> 
-
-        <div class="beneficios">
-            <div class="card">
-                <i class="fa-regular fa-gem"></i>
-                <h3>Calidad premium</h3>
-                <p>Telas resistentes y cómodas</p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-shirt"></i>
-                <h3>Estilo Urbano</h3>
-                <p>Moda moderna para cualquier ocasión</p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-truck-fast"></i>
-                <h3>Envío rápido</h3>
-                <p>Recibe tu pedido en tiempo récord</p>
-            </div>
-        </div>
     </main>
     <footer>
     <section id="contacto">
@@ -160,11 +140,11 @@
                 <th>Detalle</th>
             </tr>
             <tr>
-                <td><i class="fa-brands fa-whatsapp"></i> WhatsApp</td>
-                <td>959 109 491</td>
+                <td>WhatsApp</td>
+                <td>999 999 999</td>
             </tr>
             <tr>
-                <td><i class="fa-solid fa-envelope"></i> Email</td>
+                <td>Email</td>
                 <td>contacto@stylezone.com</td>
             </tr>
         </table>
@@ -188,7 +168,7 @@
         </select><br><br>
 
         <label>Mensaje:</label><br>
-        <textarea name="mensaje" rows="4" cols="20"></textarea><br><br>
+        <textarea name="mensaje" rows="4" cols="30"></textarea><br><br>
 
         <button type="submit">Enviar</button>
     </form>
@@ -196,7 +176,15 @@
     </section>
 
     <p class="copy">© 2026 StyleZone - Todos los derechos reservados</p>
-</footer>
-</body>
 
+<footer>
+   </section>
+
+<p class="copy">© 2026 StyleZone - Todos los derechos reservados</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
 </html>
