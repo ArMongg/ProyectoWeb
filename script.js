@@ -100,25 +100,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const beneficios = [
 
-    {
-        titulo: "Envío Gratis",
-        descripcion: "En compras mayores a S/150 realizamos envíos gratuitos."
-    },
+{
+    icono:"local_shipping",
+    titulo:"Envío Gratis",
+    descripcion:"En compras mayores a S/150 realizamos envíos gratuitos."
+},
 
-    {
-        titulo: "Calidad Garantizada",
-        descripcion: "Todas nuestras prendas pasan por un control de calidad."
-    },
+{
+    icono:"verified",
+    titulo:"Calidad Garantizada",
+    descripcion:"Todas nuestras prendas pasan por un control de calidad."
+},
 
-    {
-        titulo: "Pago Seguro",
-        descripcion: "Aceptamos diferentes métodos de pago completamente seguros."
-    },
+{
+    icono:"lock",
+    titulo:"Pago Seguro",
+    descripcion:"Aceptamos diferentes métodos de pago completamente seguros."
+},
 
-    {
-        titulo: "Atención Personalizada",
-        descripcion: "Nuestro equipo responderá todas tus consultas rápidamente."
-    }
+{
+    icono:"support_agent",
+    titulo:"Atención Personalizada",
+    descripcion:"Nuestro equipo responderá todas tus consultas rápidamente."
+}
 
 ];
 
@@ -131,9 +135,14 @@ for(let i=0; i<beneficios.length; i++){
     tarjeta.classList.add("card");
 
     tarjeta.innerHTML = `
-        <h3>${beneficios[i].titulo}</h3>
-        <p>${beneficios[i].descripcion}</p>
-    `;
+    <span class="material-symbols-outlined icono">
+        ${beneficios[i].icono}
+    </span>
+
+    <h3>${beneficios[i].titulo}</h3>
+
+    <p>${beneficios[i].descripcion}</p>
+`;
 
     contenedor.appendChild(tarjeta);
 

@@ -724,41 +724,64 @@ footer{
 }
 
 @keyframes zoomIn {
-    from { transform: scale(0.85); }<
+    from { transform: scale(0.85); }
     to { transform: scale(1); }
 }
 
 #beneficios{
-    padding:40px 20px;
-    text-align:center;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+#beneficios h2{
+    font-size: 45px;
+    color: white;
+    margin-bottom: 15px;
 }
 
 .beneficios{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    margin-top:25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+.icono{
+    font-size:55px;
+    color:#ff2d2d;
+    margin-bottom:15px;
+    display:block;
 }
 
 .card{
-    width:250px;
-    background:white;
-    border-radius:10px;
-    padding:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,.2);
-    transition:.3s;
+    width: 250px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    transition: .35s;
+    cursor: pointer;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255,0,0,.4);
+    border-color: red;
+}
+
+.card h1{
+    font-size: 50px;
+    margin-bottom: 15px;
 }
 
 .card h3{
-    color:#222;
-    margin-bottom:10px;
+    color: white;
+    margin-bottom: 12px;
 }
 
 .card p{
-    color:#555;
+    color: #ddd;
+    line-height: 1.6;
 }
