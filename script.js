@@ -147,3 +147,9 @@ for(let i=0; i<beneficios.length; i++){
     contenedor.appendChild(tarjeta);
 
 }
+
+//MENU HAMBURGUESA
+function toggleMenu() {
+    const menu = document.getElementById('menu-principal');
+    menu.classList.toggle('activo');
+}
