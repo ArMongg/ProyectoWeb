@@ -108,4 +108,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    const formulario = document.querySelector("form");
+
+    formulario.addEventListener("submit", (e) => {
+
+        e.preventDefault();
+
+        const confirmar = confirm("¿Estás seguro de enviar tus datos?");
+
+        if (confirmar) {
+
+            const nombreUsuario = prompt("Para confirmar, escribe tu nombre:");
+
+            if (nombreUsuario) {
+                alert("¡Gracias " + nombreUsuario + ", formulario enviado!");
+            } else {
+                alert("No escribiste tu nombre.");
+            }
+
+        } else {
+            alert("Envío cancelado.");
+        }
+
+    });
+
 });
