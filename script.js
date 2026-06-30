@@ -153,3 +153,56 @@ function menuHamburguesa() {
     const menu = document.getElementById('menu-principal');
     menu.classList.toggle('activo');
 }
+
+
+function mostrarInformacion(){
+
+    const producto = document.getElementById("producto").value;
+
+    const mensaje = document.getElementById("mensajeProducto");
+
+    switch(producto){
+
+        case "negra":
+
+            mensaje.innerHTML =
+            "La Polera Negra es nuestro modelo más vendido y combina con cualquier estilo.";
+
+            break;
+
+        case "blanca":
+
+            mensaje.innerHTML =
+            "La Polera Blanca ofrece un diseño limpio y moderno.";
+
+            break;
+
+        case "roja":
+
+            mensaje.innerHTML =
+            "La Polera Roja destaca por su estilo urbano y llamativo.";
+
+            break;
+
+        case "azul":
+
+            mensaje.innerHTML =
+            "La Polera Azul es ideal para un look casual.";
+
+            break;
+
+        case "oversize":
+
+            mensaje.innerHTML =
+            "La Polera Oversize brinda mayor comodidad y un estilo moderno.";
+
+            break;
+
+        default:
+
+            mensaje.innerHTML =
+            "Seleccione una polera para ver su información.";
+
+    }
+
+}

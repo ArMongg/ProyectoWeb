@@ -819,3 +819,17 @@ footer{
     color: #ddd;
     line-height: 1.6;
 }
+
+#mensajeProducto{
+
+    margin-top:15px;
+
+    color:#ff3b3b;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}

@@ -173,13 +173,28 @@
         <input type="email" name="correo" required><br><br>
 
         <label>Producto de interés:</label><br>
-        <select name="producto">
-            <option>Polera Negra</option>
-            <option>Polera Blanca</option>
-            <option>Polera Roja</option>
-            <option>Polera Azul</option>
-            <option>Polera Oversize</option>
-        </select><br><br>
+
+            <select id="producto" name="producto" onchange="mostrarInformacion()">
+
+                <option value="">Seleccione un producto</option>
+
+                <option value="negra">Polera Negra</option>
+
+                <option value="blanca">Polera Blanca</option>
+
+                <option value="roja">Polera Roja</option>
+
+                <option value="azul">Polera Azul</option>
+
+                <option value="oversize">Polera Oversize</option>
+
+            </select>
+
+            <p id="mensajeProducto">
+                Seleccione una polera para ver su información.
+            </p>
+
+            <br>
 
         <label>Mensaje:</label><br>
         <textarea name="mensaje" rows="4" cols="30"></textarea><br><br>
