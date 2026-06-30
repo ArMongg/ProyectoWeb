@@ -149,7 +149,7 @@ for(let i=0; i<beneficios.length; i++){
 }
 
 //MENU HAMBURGUESA
-function toggleMenu() {
+function menuHamburguesa() {
     const menu = document.getElementById('menu-principal');
     menu.classList.toggle('activo');
 }
