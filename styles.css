@@ -707,18 +707,11 @@ footer{
     animation: zoomIn .25s ease;
 }
 
-/* =========================
-   SALIDA (AMBOS)
-========================= */
-
 .modal.salir,
 .modal-video.salir {
     animation: fadeOut .25s ease forwards;
 }
 
-/* =========================
-   ANIMACIONES
-========================= */
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -731,6 +724,41 @@ footer{
 }
 
 @keyframes zoomIn {
-    from { transform: scale(0.85); }
+    from { transform: scale(0.85); }<
     to { transform: scale(1); }
+}
+
+#beneficios{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.beneficios{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:25px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#222;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
 }

@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================
-       IMÁGENES (MODAL)
-    ========================== */
-
     const imagenes = document.querySelectorAll(".galeria img");
 
     imagenes.forEach(img => {
@@ -38,11 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
-
-
-    /* =========================
-       VIDEOS (MODAL)
-    ========================== */
 
     const videos = document.querySelectorAll(".media-video");
 
@@ -81,11 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-
-    /* =========================
-       ESC PARA CERRAR TODO
-    ========================== */
-
     document.addEventListener("keydown", (e) => {
 
         if (e.key === "Escape") {
@@ -109,3 +95,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
+const beneficios = [
+
+    {
+        titulo: "Envío Gratis",
+        descripcion: "En compras mayores a S/150 realizamos envíos gratuitos."
+    },
+
+    {
+        titulo: "Calidad Garantizada",
+        descripcion: "Todas nuestras prendas pasan por un control de calidad."
+    },
+
+    {
+        titulo: "Pago Seguro",
+        descripcion: "Aceptamos diferentes métodos de pago completamente seguros."
+    },
+
+    {
+        titulo: "Atención Personalizada",
+        descripcion: "Nuestro equipo responderá todas tus consultas rápidamente."
+    }
+
+];
+
+const contenedor = document.getElementById("contenedorBeneficios");
+
+for(let i=0; i<beneficios.length; i++){
+
+    const tarjeta = document.createElement("div");
+
+    tarjeta.classList.add("card");
+
+    tarjeta.innerHTML = `
+        <h3>${beneficios[i].titulo}</h3>
+        <p>${beneficios[i].descripcion}</p>
+    `;
+
+    contenedor.appendChild(tarjeta);
+
+}
