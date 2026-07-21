@@ -769,7 +769,7 @@ footer{
 
 #beneficios h2{
     font-size: 45px;
-    color: white;
+    color:var(--sz-texto);
     margin-bottom: 15px;
 }
 
