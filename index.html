@@ -1,219 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&family=Poppins:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <title>STYLEZONE</title>
-
+    <title>StyleZone</title>
 </head>
 <body>
     <header>
-        <h1>StyleZone</h1>
-        <button class="hamburguesa" id="btn-hamburguesa" onclick="menuHamburguesa()">
+        <h1>Style<span>Zone</span></h1>
+        <button class="hamburguesa" id="btn-hamburguesa" onclick="menuHamburguesa()" aria-label="Abrir menu de navegacion" title="Menu">
             <span class="linea"></span>
             <span class="linea"></span>
             <span class="linea"></span>
         </button>
-        <nav>
+        <nav aria-label="Navegacion principal">
             <ul class="menu" id="menu-principal">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#multimedia">Multimedia</a></li>
-                <li><a href="#tabla">Precios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" title="Ir al inicio">Inicio</a></li>
+                <li><a href="#nosotros" title="Ir a nosotros">Nosotros</a></li>
+                <li><a href="#productos" title="Ver productos">Productos</a></li>
+                <li><a href="#beneficios" title="Ver beneficios">Beneficios</a></li>
+                <li><a href="#multimedia" title="Ver multimedia">Multimedia</a></li>
+                <li><a href="#tabla" title="Ver precios">Precios</a></li>
+                <li><a href="#contacto" title="Ir a contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
-        <section id="inicio">
-            <h2>Bienvenido a StyleZone</h2>
-            <p>Descubre las mejores poleras con estilo urbano, comodidad y calidad</p>
+        <section id="inicio" class="hero">
+            <div class="hero-contenido">
+                <p class="etiqueta">Moda urbana universitaria</p>
+                <h2>Bienvenido a StyleZone</h2>
+                <p>Descubre poleras con estilo urbano, comodidad y calidad para combinar tu dia a dia.</p>
+                <div class="hero-acciones">
+                    <a class="btn btn-principal" href="#productos" title="Ver nuestras poleras">Ver productos</a>
+                    <a class="btn btn-secundario" href="#contacto" title="Contactar con StyleZone">Contactanos</a>
+                </div>
+            </div>
         </section>
 
+        <section id="nosotros" class="seccion-clara">
+            <h2>Nosotros</h2>
+            <p class="intro-seccion">StyleZone es una propuesta universitaria enfocada en ofrecer poleras urbanas con disenos modernos, precios accesibles y una atencion cercana.</p>
 
-  <section id="productos">
-    <h2>Nuestras poleras</h2>
+            <div class="nosotros-grid">
+                <article class="info-card">
+                    <span class="material-symbols-outlined icono">groups</span>
+                    <h3>Descripcion</h3>
+                    <p>Somos una marca ficticia creada para aplicar conocimientos de Programacion Web usando HTML, CSS y JavaScript.</p>
+                </article>
+                <article class="info-card">
+                    <span class="material-symbols-outlined icono">flag</span>
+                    <h3>Mision</h3>
+                    <p>Brindar prendas comodas y llamativas que permitan expresar un estilo urbano de manera sencilla.</p>
+                </article>
+                <article class="info-card">
+                    <span class="material-symbols-outlined icono">visibility</span>
+                    <h3>Vision</h3>
+                    <p>Ser una propuesta reconocida dentro del curso por su diseno ordenado, responsive y funcional.</p>
+                </article>
+            </div>
+        </section>
 
-    <div class="galeria">
-        <img src="img/Poleras.png" alt="Poleras estilo urbano">
-        <img src="img/Poleras2.png" alt="Poleras estilo urbano">
-    </div>
-</section>
+        <section id="productos">
+            <h2>Nuestras poleras</h2>
+            <p class="intro-seccion">Modelos basicos para distintos gustos, pensados como una vitrina simple de productos.</p>
 
-    <section id="beneficios">
-        <h2>¿Por qué elegir StyleZone?</h2>
+            <div class="galeria">
+                <article class="producto-card">
+                    <img src="img/Poleras.png" alt="Coleccion de poleras urbanas StyleZone" title="Coleccion urbana StyleZone">
+                    <div class="producto-info">
+                        <h3>Coleccion Urbana</h3>
+                        <p>Disenos modernos para outfits casuales.</p>
+                    </div>
+                </article>
+                <article class="producto-card">
+                    <img src="img/Poleras2.png" alt="Poleras StyleZone en diferentes colores" title="Poleras en diferentes colores">
+                    <div class="producto-info">
+                        <h3>Estilo Casual</h3>
+                        <p>Prendas versatiles para uso diario.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-        <div id="contenedorBeneficios" class="beneficios">
+        <section id="beneficios" class="seccion-clara">
+            <h2>&iquest;Por que elegir StyleZone?</h2>
+            <p class="intro-seccion">Beneficios principales presentados dinamicamente con JavaScript.</p>
+            <div id="contenedorBeneficios" class="beneficios"></div>
 
-        </div>
-    </section>
+            <div class="contador-box" aria-label="Indicador de clientes satisfechos">
+                <span class="contador" data-target="250">0</span>
+                <p>clientes satisfechos</p>
+            </div>
+        </section>
 
         <section id="multimedia">
+            <h2>Experiencia Visual</h2>
 
-    <h2>Experiencia Visual</h2>
+            <div class="media-container">
+                <article class="media-box">
+                    <h3>Video principal</h3>
+                    <video class="media-video" autoplay muted loop title="Video principal de StyleZone">
+                        <source src="video/mi_video.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </article>
 
-    <div class="media-container">
+                <article class="media-box">
+                    <h3>Video promocional</h3>
+                    <video class="media-video" autoplay muted loop title="Video promocional de StyleZone">
+                        <source src="video/Video.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </article>
+            </div>
 
-        <div class="media-box">
-            <h3>Video principal</h3>
-            <video class="media-video" autoplay muted loop>
-                <source src="video/mi_video.mp4" type="video/mp4">
-            </video>
-        </div>
+            <div class="audio-card">
+                <h3>Experiencia sonora</h3>
+                <audio controls loop title="Audio ambiental de StyleZone">
+                    <source src="audio/mi_audio.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </section>
 
-        <div class="media-box">
-            <h3>Video promocional</h3>
-            <video class="media-video" autoplay muted loop>
-                <source src="video/Video.mp4" type="video/mp4">
-            </video>
-        </div>
-
-    </div>
-    <div class="audio-card">
-    <h3>Experiencia sonora</h3>
-    <audio controls loop>
-        <source src="audio/mi_audio.mp3" type="audio/mpeg">
-    </audio>
-</div>
-
-</section>
-
-        <section id="tabla">
+        <section id="tabla" class="seccion-clara">
             <h2>Lista de Productos</h2>
 
-            <table>
-                <tr>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Talla</th>
-                </tr>
-                <tr>
-                    <td>Polera Negra</td>
-                    <td>S/50</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Polera Blanca</td>
-                    <td>S/45</td>
-                    <td>L</td>
-                </tr>
-                <tr>
-                    <td>Polera Roja</td>
-                    <td>S/55</td>
-                    <td>S</td>
-                </tr>
-                <tr>
-                    <td>Polera Azul</td>
-                    <td>S/60</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Polera Oversize</td>
-                    <td>S/70</td>
-                    <td>L</td>
-                </tr>
-            </table>
+            <div class="tabla-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Talla</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Polera Negra</td>
+                            <td>S/50</td>
+                            <td>M</td>
+                        </tr>
+                        <tr>
+                            <td>Polera Blanca</td>
+                            <td>S/45</td>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <td>Polera Roja</td>
+                            <td>S/55</td>
+                            <td>S</td>
+                        </tr>
+                        <tr>
+                            <td>Polera Azul</td>
+                            <td>S/60</td>
+                            <td>M</td>
+                        </tr>
+                        <tr>
+                            <td>Polera Oversize</td>
+                            <td>S/70</td>
+                            <td>L</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <h2>Horarios de Atención</h2>
+            <h2>Horarios de Atencion</h2>
 
-            <table>
-                <tr>
-                    <th>Día</th>
-                    <th>Horario</th>
-                </tr>
-                <tr>
-                    <td>Lunes - Viernes</td>
-                    <td>9:00 am - 6:00 pm</td>
-                </tr>
-                <tr>
-                    <td>Sábado</td>
-                    <td>10:00 am - 4:00 pm</td>
-                </tr>
-                <tr>
-                    <td>Domingo</td>
-                    <td>Cerrado</td>
-                </tr>
-            </table>
-        </section> 
+            <div class="tabla-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes - Viernes</td>
+                            <td>9:00 am - 6:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Sabado</td>
+                            <td>10:00 am - 4:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>Cerrado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
+
     <footer>
-    <section id="contacto">
-        <h2>Contáctanos</h2>
+        <section id="contacto">
+            <h2>Contactanos</h2>
 
-        <p class="texto-contacto">
-            Estamos disponibles para ayudarte. Escríbenos por cualquiera de estos medios:
-        </p>
-
-        <table>
-            <tr>
-                <th>Medio</th>
-                <th>Detalle</th>
-            </tr>
-            <tr>
-                <td>WhatsApp</td>
-                <td>999 999 999</td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>contacto@stylezone.com</td>
-            </tr>
-        </table>
-
-     <h3>Formulario de contacto</h3>
-
-     <form>
-        <label>Nombre:</label><br>
-        <input type="text" name="nombre" required><br><br>
-
-        <label>Correo:</label><br>
-        <input type="email" name="correo" required><br><br>
-
-        <label>Producto de interés:</label><br>
-
-            <select id="producto" name="producto" onchange="mostrarInformacion()">
-
-                <option value="">Seleccione un producto</option>
-
-                <option value="negra">Polera Negra</option>
-
-                <option value="blanca">Polera Blanca</option>
-
-                <option value="roja">Polera Roja</option>
-
-                <option value="azul">Polera Azul</option>
-
-                <option value="oversize">Polera Oversize</option>
-
-            </select>
-
-            <p id="mensajeProducto">
-                Seleccione una polera para ver su información.
+            <p class="texto-contacto">
+                Estamos disponibles para ayudarte. Escribenos por cualquiera de estos medios:
             </p>
 
-            <br>
+            <div class="tabla-responsive contacto-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Medio</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>WhatsApp</td>
+                            <td>999 999 999</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>contacto@stylezone.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <label>Mensaje:</label><br>
-        <textarea name="mensaje" rows="4" cols="30"></textarea><br><br>
+            <h3>Formulario de contacto</h3>
 
-        <button type="submit">Enviar</button>
-    </form>
-        
-    </section>
+            <form id="formulario-contacto" novalidate>
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name" aria-describedby="error-nombre" title="Ingrese su nombre completo">
+                    <small class="error" id="error-nombre"></small>
+                </div>
 
-    <p class="copy">© 2026 StyleZone - Todos los derechos reservados</p>
+                <div class="campo-formulario">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email" aria-describedby="error-correo" title="Ingrese un correo valido">
+                    <small class="error" id="error-correo"></small>
+                </div>
 
-<footer>
-   </section>
+                <div class="campo-formulario">
+                    <label for="producto">Producto de interes:</label>
+                    <select id="producto" name="producto" onchange="mostrarInformacion()" title="Seleccione una polera de interes">
+                        <option value="">Seleccione un producto</option>
+                        <option value="negra">Polera Negra</option>
+                        <option value="blanca">Polera Blanca</option>
+                        <option value="roja">Polera Roja</option>
+                        <option value="azul">Polera Azul</option>
+                        <option value="oversize">Polera Oversize</option>
+                    </select>
 
-<p class="copy">© 2026 StyleZone - Todos los derechos reservados</p>
+                    <p id="mensajeProducto">
+                        Seleccione una polera para ver su informacion.
+                    </p>
+                </div>
 
-</footer>
+                <div class="campo-formulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" title="Escriba su mensaje"></textarea>
+                </div>
 
-<script src="script.js"></script>
+                <button type="submit" title="Enviar formulario de contacto">Enviar</button>
+                <p class="mensaje-exito" id="mensaje-exito" aria-live="polite"></p>
+            </form>
+        </section>
 
+        <p class="copy">&copy; 2026 StyleZone - Todos los derechos reservados</p>
+    </footer>
+
+    <button class="btn-volver-arriba" id="btn-volver-arriba" aria-label="Volver arriba" title="Volver arriba">
+        <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
