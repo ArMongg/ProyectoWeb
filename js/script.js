@@ -41,14 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         video.addEventListener("click", () => {
 
-            const src = video.querySelector("source").src;
+            const source = video.querySelector("source");
+
+            if (!source) return;
+
+            const src = source.getAttribute("src");
 
             const modalVideo = document.createElement("div");
             modalVideo.classList.add("modal-video");
 
             modalVideo.innerHTML = `
                 <div class="modal-video-contenido">
-                    <video src="${src}" controls autoplay></video>
+                    <video controls autoplay playsinline>
+                        <source src="${src}" type="video/mp4">
+                        Tu navegador no soporta el video.
+                    </video>
                 </div>
             `;
 
@@ -96,141 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-const formularioAntiguo = document.querySelector("form");
-
-// Manejador anterior desactivado; la validacion final se encuentra mas abajo.
-if (false && formularioAntiguo) formularioAntiguo.addEventListener("submit", (e) => {
-
-    e.preventDefault();
-
-    const confirmar = false;
-
-    if (confirmar) {
-
-        const nombreUsuario = "";
-
-        if (nombreUsuario) {
-            alert("Gracias " + nombreUsuario + ", formulario enviado!");
-        } else {
-            alert("No escribiste tu nombre.");
-        }
-
-    } else {
-        alert("Envio cancelado.");
-    }
-
-});
 
 
 
-const beneficios = [
 
-{
-    icono:"local_shipping",
-    titulo:"Envío Gratis",
-    descripcion:"En compras mayores a S/150 realizamos envíos gratuitos."
-},
-
-{
-    icono:"verified",
-    titulo:"Calidad Garantizada",
-    descripcion:"Todas nuestras prendas pasan por un control de calidad."
-},
-
-{
-    icono:"lock",
-    titulo:"Pago Seguro",
-    descripcion:"Aceptamos diferentes métodos de pago completamente seguros."
-},
-
-{
-    icono:"support_agent",
-    titulo:"Atención Personalizada",
-    descripcion:"Nuestro equipo responderá todas tus consultas rápidamente."
-}
-
-];
-
-const contenedor = document.getElementById("contenedorBeneficios");
-
-for(let i=0; i<beneficios.length; i++){
-
-    const tarjeta = document.createElement("div");
-
-    tarjeta.classList.add("card");
-
-    tarjeta.innerHTML = `
-    <span class="material-symbols-outlined icono">
-        ${beneficios[i].icono}
-    </span>
-
-    <h3>${beneficios[i].titulo}</h3>
-
-    <p>${beneficios[i].descripcion}</p>
-`;
-
-    contenedor.appendChild(tarjeta);
-
-}
-
-//MENU HAMBURGUESA
-function menuHamburguesa() {
-    const menu = document.getElementById('menu-principal');
-    menu.classList.toggle('activo');
-}
-
-
-function mostrarInformacion(){
-
-    const producto = document.getElementById("producto").value;
-
-    const mensaje = document.getElementById("mensajeProducto");
-
-    switch(producto){
-
-        case "negra":
-
-            mensaje.innerHTML =
-            "La Polera Negra es nuestro modelo más vendido y combina con cualquier estilo.";
-
-            break;
-
-        case "blanca":
-
-            mensaje.innerHTML =
-            "La Polera Blanca ofrece un diseño limpio y moderno.";
-
-            break;
-
-        case "roja":
-
-            mensaje.innerHTML =
-            "La Polera Roja destaca por su estilo urbano y llamativo.";
-
-            break;
-
-        case "azul":
-
-            mensaje.innerHTML =
-            "La Polera Azul es ideal para un look casual.";
-
-            break;
-
-        case "oversize":
-
-            mensaje.innerHTML =
-            "La Polera Oversize brinda mayor comodidad y un estilo moderno.";
-
-            break;
-
-        default:
-
-            mensaje.innerHTML =
-            "Seleccione una polera para ver su información.";
-
-    }
-
-}
 
 /* ==========================
    MEJORAS FINALES - JAVASCRIPT
@@ -306,10 +182,12 @@ function iniciarValidacionFormulario() {
         const confirmar = confirm("Estas seguro de enviar tus datos?");
 
         if (!confirmar) {
+            alert("Envio cancelado.");
             mensajeExito.textContent = "Envio cancelado. Puedes revisar tus datos antes de enviarlos.";
             return;
         }
 
+        alert("Gracias " + nombre + ", formulario enviado correctamente.");
         mensajeExito.textContent = "Gracias " + nombre + ", tu mensaje fue enviado correctamente.";
         formulario.reset();
         mostrarInformacion();
@@ -319,6 +197,10 @@ function iniciarValidacionFormulario() {
 function validarFormularioContacto(nombre, correo) {
     const errorNombre = document.getElementById("error-nombre");
     const errorCorreo = document.getElementById("error-correo");
+
+    if (!errorNombre || !errorCorreo) {
+        return false;
+    }
     const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
     let valido = true;
 
@@ -438,35 +320,39 @@ function mejorarAccesibilidadMenu() {
 }
 
 function menuHamburguesa() {
+
     const menu = document.getElementById("menu-principal");
     const boton = document.getElementById("btn-hamburguesa");
 
+    if (!menu || !boton) return;
+
     menu.classList.toggle("activo");
     boton.classList.toggle("activo");
-    boton.setAttribute("aria-expanded", menu.classList.contains("activo"));
+
+    boton.setAttribute(
+        "aria-expanded",
+        menu.classList.contains("activo")
+    );
 }
 
 function mostrarInformacion() {
-    const producto = document.getElementById("producto").value;
+
+    const selector = document.getElementById("producto");
     const mensaje = document.getElementById("mensajeProducto");
 
-    switch(producto) {
-        case "negra":
-            mensaje.textContent = "La Polera Negra es nuestro modelo mas vendido y combina con cualquier estilo.";
-            break;
-        case "blanca":
-            mensaje.textContent = "La Polera Blanca ofrece un diseno limpio y moderno.";
-            break;
-        case "roja":
-            mensaje.textContent = "La Polera Roja destaca por su estilo urbano y llamativo.";
-            break;
-        case "azul":
-            mensaje.textContent = "La Polera Azul es ideal para un look casual.";
-            break;
-        case "oversize":
-            mensaje.textContent = "La Polera Oversize brinda mayor comodidad y un estilo moderno.";
-            break;
-        default:
-            mensaje.textContent = "Seleccione una polera para ver su informacion.";
-    }
+    if (!selector || !mensaje) return;
+
+    const producto = selector.value;
+
+    const productos = {
+        negra: "La Polera Negra es nuestro modelo más vendido y combina con cualquier estilo.",
+        blanca: "La Polera Blanca ofrece un diseño limpio y moderno.",
+        roja: "La Polera Roja destaca por su estilo urbano y llamativo.",
+        azul: "La Polera Azul es ideal para un look casual.",
+        oversize: "La Polera Oversize brinda mayor comodidad y un estilo moderno."
+    };
+
+    mensaje.textContent =
+        productos[producto] ||
+        "Seleccione una polera para ver su información.";
 }
